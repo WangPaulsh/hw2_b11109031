@@ -29,7 +29,11 @@ import androidx.compose.ui.unit.sp
 val imageList = listOf(
     Pair(R.drawable.image1, "台北101"),
     Pair(R.drawable.image2, "行天宮"),
-    Pair(R.drawable.image3, "松山文創園區")
+    Pair(R.drawable.image3, "松山文創園區") ,
+    Pair(R.drawable.image4, "故宮博物院"),
+    Pair(R.drawable.image5, "中正紀念堂"),
+    Pair(R.drawable.image6, "太魯閣國家公園"),
+    Pair(R.drawable.image7, "日月潭")
 )
 
 @OptIn(ExperimentalComposeUiApi::class)

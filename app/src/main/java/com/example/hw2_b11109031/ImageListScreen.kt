@@ -23,15 +23,16 @@ import com.example.hw2_b11109031.ui.theme.Hw2_b11109031Theme
 
 @Composable
 fun ImageListScreen(onImageSelected: (Pair<Int, String>) -> Unit) {
-    LazyColumn {
-        items(imageList) { image ->
-            Spacer(modifier = Modifier.height(20.dp))
+    Spacer(modifier = Modifier.height(50.dp))
 
-            Column(
-                modifier = Modifier.fillMaxSize(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
+    Box(
+        modifier = Modifier
+            .size(300.dp, 600.dp)
+            .padding(start = 50.dp)
+    ) {
+        LazyColumn {
+            items(imageList) { image ->
+
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Box (
