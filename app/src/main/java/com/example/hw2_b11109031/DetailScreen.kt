@@ -9,6 +9,7 @@ import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Text
 import androidx.compose.material3.Button
+import androidx.compose.material3.IconButton
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -43,6 +44,15 @@ fun DetailScreen(image: Pair<Int, String>, onBack: () -> Unit) {
     val context = LocalContext.current
     val uriHandler = LocalUriHandler.current
 
+    IconButton(onClick = onBack) {
+        Image(
+            painter = painterResource(id = R.drawable.back),
+            contentDescription = null,
+            modifier = Modifier
+                .height(30.dp),
+        )
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -50,15 +60,6 @@ fun DetailScreen(image: Pair<Int, String>, onBack: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Button(onClick = onBack) {
-            Image(
-                painter = painterResource(id = R.drawable.back),
-                contentDescription = null,
-                modifier = Modifier
-                    .height(30.dp),
-            )
-        }
-
         Spacer(modifier = Modifier.height(16.dp))
 
         Box (
@@ -90,7 +91,7 @@ fun DetailScreen(image: Pair<Int, String>, onBack: () -> Unit) {
             )
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(20.dp))
 
         Button(
             onClick = {
